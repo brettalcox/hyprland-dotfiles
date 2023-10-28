@@ -1,0 +1,88 @@
+{
+  "layer": "top",
+    "output": ["DP-3"],
+    "modules-left": ["custom/gentoo", "hyprland/workspaces", "custom/spotify"],
+    "modules-center": ["clock", "custom/weather"],
+    "modules-right": ["tray", "pulseaudio", "custom/audio_idle_inhibitor", "bluetooth", "network"],
+    "custom/gentoo": {
+      "format": " 󰣨 ",
+      "tooltip": false,
+      "on-click": "sleep 0.1 && sh $HOME/.config/rofi/bin/powermenu"
+    },
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "format": "{icon}",
+      "tooltip": false,
+      "all-outputs": true,
+      "format-icons": {
+        "active": "",
+        "default": ""
+      }
+    },
+    "clock": {
+      "format": "<span color='#b4befe'> </span>{:%H:%M}",
+    },
+    "custom/spotify": {
+      "exec": "/usr/bin/python3 $HOME/.config/waybar/custom_modules/mediaplayer.py --player spotify_player",
+      "max-length": 40,
+      "escape": true,
+      "format": "<span color='#b4befe'> </span>{}",
+      "return-type": "json",
+      "on-click": "sleep 0.1 && playerctl -p spotify_player play-pause",
+      "on-scroll-up": "sleep 0.1 && playerctl -p spotify_player next",
+      "on-scroll-down": "sleep 0.1 && playerctl -p spotify_player previous"
+    },
+    "pulseaudio": {
+      "format": "<span color='#b4befe'> {icon}</span> {volume}%",
+      "format-muted": "",
+      "tooltip": false,
+      "format-icons": {
+        "headphone": "",
+        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+      },
+      "scroll-step": 5,
+      "on-click": "sleep 0.1 && amixer set Master toggle"
+    },
+    "custom/audio_idle_inhibitor": {
+      "format": "{icon}",
+      "exec": "sway-audio-idle-inhibit --dry-print-both-waybar",
+      "exec-if": "which sway-audio-idle-inhibit",
+      "return-type": "json",
+      "tooltip": false,
+      "format-icons": {
+      	"output": "",
+	"input": "",
+	"output-input": "  ",
+	"none": ""
+      }
+    },
+    "bluetooth": {
+      "format": "<span color='#b4befe'></span> {status}",
+      "format-disabled": "", // an empty format will hide the module
+      "format-connected": "<span color='#b4befe'></span> {num_connections}",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}",
+      "on-click": "sleep 0.1 && sh $HOME/.config/rofi/bin/bluetooth"
+    },
+    "network": {
+      "interface": "wlp0s20f3",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#b4befe'> </span>{essid}",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+      "tooltip": false,
+      "on-click": "sleep 0.1 && sh $HOME/.config/rofi/bin/network-manager"
+    },
+    "tray": {
+      "icon-size": 22,
+      "spacing": 11
+    },
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": false,
+        "interval": 425,
+        "exec": "/usr/bin/python3 $HOME/.config/waybar/custom_modules/weather-api.py",
+        "return-type": "string",
+	"on-click": "firefox https://wttr.in/64081"
+    }
+}

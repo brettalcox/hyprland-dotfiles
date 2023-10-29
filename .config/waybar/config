@@ -83,6 +83,6 @@
         "interval": 425,
         "exec": "/usr/bin/python3 $HOME/.config/waybar/custom_modules/weather-api.py",
         "return-type": "string",
-	"on-click": "firefox https://wttr.in/64081"
+	"on-click": "firefox https://wttr.in/kansas+city"
     }
 }

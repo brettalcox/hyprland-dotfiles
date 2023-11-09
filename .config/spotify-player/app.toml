@@ -45,4 +45,5 @@ volume = 100
 bitrate = 320
 audio_cache = false
 normalization = false
-backend = "sdl"
+backend = "pulseaudio"
+format = "S24"

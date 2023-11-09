@@ -1,5 +1,6 @@
 [global]
 format = "<b>%s</b>\n%b"
+follow = keyboard
 
 icon_path = "~/.local/share/icons/"
 icon_theme = WhiteSur

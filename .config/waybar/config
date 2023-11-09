@@ -34,6 +34,7 @@
     },
     "pulseaudio": {
       "format": "<span color='#b4befe'> {icon}</span> {volume}%",
+      "format-bluetooth": " {volume}% {icon}",
       "format-muted": "",
       "tooltip": false,
       "format-icons": {
@@ -41,7 +42,8 @@
         "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
       },
       "scroll-step": 5,
-      "on-click": "sleep 0.1 && amixer set Master toggle"
+      "on-click-middle": "sleep 0.1 && amixer set Master toggle",
+      "on-click": "sleep 0.1 && pavucontrol"
     },
     "custom/audio_idle_inhibitor": {
       "format": "{icon}",
@@ -83,6 +85,6 @@
         "interval": 425,
         "exec": "/usr/bin/python3 $HOME/.config/waybar/custom_modules/weather-api.py",
         "return-type": "string",
-	"on-click": "firefox https://wttr.in/kansas+city"
+	"on-click": "firefox https://wttr.in/64081"
     }
 }

@@ -1,33 +1,23 @@
 [[themes]]
-name = "catppuccin-mocha"
+name = "Catppuccin-mocha"
 [themes.palette]
-background = "#1e1e2e"
-foreground = "#cdd6f4"
-black = "#45475a"
-red = "#f38ba8"
-green = "#a6e3a1"
-yellow = "#f9e2af"
-blue = "#89b4fa"
-magenta = "#f5c2e7"
-cyan = "#94e2d5"
-white = "#bac2de"
-bright_black = "#585b70"
-bright_red = "#f38ba8"
-bright_green = "#a6e3a1"
-bright_yellow = "#f9e2af"
-bright_blue = "#89b4fa"
-bright_magenta = "#f5c2e7"
-bright_cyan = "#94e2d5"
-bright_white = "#a6adc8"
+foreground = "#CDD6F4"
+black = "#1E1E2E"
+blue = "#89B4FA"
+cyan = "#89DCEB"
+green = "#A6E3A1"
+magenta = "#CBA6F7"
+red = "#F38BA8"
+white = "#CDD6F4"
+yellow = "#F9E2AF"
+bright_black = "#1E1E2E"
+bright_blue = "#89B4FA"
+bright_cyan = "#89DCEB"
+bright_green = "#A6E3A1"
+bright_magenta = "#CBA6F7"
+bright_red = "#F38BA8"
+bright_white = "#CDD6F4"
+bright_yellow = "#F9E2AF"
+
 [themes.component_style]
-block_title = { fg = "Magenta"  }
-border = {}
-playback_track = { fg = "Cyan", modifiers = ["Bold"] }
-playback_artists = { fg = "Cyan", modifiers = ["Bold"] }
-playback_album = { fg = "Yellow" }
-playback_metadata = { fg = "BrightBlack" }
-playback_progress_bar = { bg = "BrightBlack", fg = "Green" }
-current_playing = { fg = "Green", modifiers = ["Bold"] }
-page_desc = { fg = "Cyan", modifiers = ["Bold"] }
-table_header = { fg = "Blue" }
-selection = { modifiers = ["Bold", "Reversed"] }
+selection = { bg = { Rgb = { r = 49, g = 50, b = 68 } }, modifiers = ["Bold"] }

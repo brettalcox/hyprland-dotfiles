@@ -74,7 +74,6 @@ case $chosen in
         fi
         ;;
     $lock)
-        #swaylock -f --indicator-caps-lock -e -c 11111b --ring-color b4befe --ring-ver-color b4befe --key-hl-color 11111b --inside-color b4befe --inside-caps-lock-color b4befe --inside-ver-color b4befe --inside-clear-color a6e3a1 --ring-clear-color a6e3a1 --ring-wrong-color f38ba8 --inside-wrong-color f38ba8 --bs-hl-color f38ba8 --text-caps-lock-color 11111b --indicator-idle-visible --font 'Fira Codei' --indicator-radius 100
 	loginctl lock-session
         ;;
     $suspend)

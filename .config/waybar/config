@@ -21,6 +21,8 @@
     },
     "clock": {
       "format": "<span color='#b4befe'> </span>{:%H:%M}",
+      "tooltip": true,
+      "tooltip-format": "{:%A, %B %d}"
     },
     "custom/spotify": {
       "exec": "/usr/bin/python3 $HOME/.config/waybar/custom_modules/mediaplayer.py --player spotify_player",

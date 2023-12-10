@@ -20,4 +20,4 @@ bright_white = "#CDD6F4"
 bright_yellow = "#F9E2AF"
 
 [themes.component_style]
-selection = { bg = { Rgb = { r = 49, g = 50, b = 68 } }, modifiers = ["Bold"] }
+selection = { bg = "#313244", modifiers = ["Bold"] }
